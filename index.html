@@ -25,7 +25,7 @@
             window.addEventListener("pagehide", clearRedirect);
 
             if (isAndroid) {
-                var appIntent = "intent://example.com/#Intent;scheme=bebefriends;package=com.woosh.bebe_friends;end";
+                var appIntent = "intent://bebefriends/#Intent;scheme=bebefriends;package=com.woosh.bebe_friends;end";
 
                 redirectTimeout = setTimeout(function () {
                     if (!appOpened) {
@@ -35,7 +35,7 @@
 
                 location.href = appIntent;
             } else if (isIos) {
-                var appLink = "bebefriends://example.com";
+                var appLink = "bebefriends://bebefriends";
 
                 redirectTimeout = setTimeout(function () {
                     if (!appOpened) {
