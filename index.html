@@ -17,7 +17,7 @@
             });
 
             if (isAndroid) {
-                var appIntent = "intent://bebefriends.com/#Intent;scheme=bebefriends;package=com.woosh.bebe_friends;end";
+                var appIntent = "intent://example.com/#Intent;scheme=bebefriends;package=com.woosh.bebe_friends;end";
 
                 redirectTimeout = setTimeout(function () {
                     location.href = "https://play.google.com/store/apps/details?id=com.woosh.bebe_friends&hl=ko-KR";
@@ -25,7 +25,7 @@
 
                 location.href = appIntent;
             } else if (isIos) {
-                var appLink = "bebefriends://bebefriends.com";
+                var appLink = "bebefriends://example.com";
 
                 redirectTimeout = setTimeout(function () {
                     location.href = "https://apps.apple.com/kr/app/%EB%B2%A0%EB%B2%A0%ED%94%84%EB%A0%8C%EC%A6%88/id6447496167";
