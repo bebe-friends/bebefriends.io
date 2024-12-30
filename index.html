@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript">
         window.onload = function () {
+            var path = window.location.pathname; 
             var isAndroid = /android/i.test(navigator.userAgent);
             var isIos = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
@@ -25,7 +26,7 @@
             window.addEventListener("pagehide", clearRedirect);
 
             if (isAndroid) {
-                var appIntent = "intent://route#Intent;scheme=bebefriends;package=com.woosh.bebe_friends;end";
+                var appIntent = `intent://route#Intent;scheme=bebefriends;package=com.woosh.bebe_friends;S.path=${encodeURIComponent(path)};end`;
 
 
                 redirectTimeout = setTimeout(function () {
@@ -36,7 +37,7 @@
 
                 location.href = appIntent;
             } else if (isIos) {
-                var appLink = "bebefriends://bebefriends";
+                var appLink = `bebefriends://bebefriends?path=${encodeURIComponent(path)}`;
 
                 redirectTimeout = setTimeout(function () {
                     if (!appOpened) {
