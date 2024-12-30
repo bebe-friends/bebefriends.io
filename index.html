@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript">
         window.onload = function () {
-            var path = window.location.pathname; 
+            var queryParams = new URLSearchParams(window.location.search);
+            var path = queryParams.get('path');
             var isAndroid = /android/i.test(navigator.userAgent);
             var isIos = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
